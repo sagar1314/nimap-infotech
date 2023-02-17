@@ -1,0 +1,40 @@
+<div class="nav">
+  <h2>DEMO APP</h2>
+  <ul>
+    <li><a>HOME</a></li>
+    <li><a>ABOUT US</a></li>
+    <li><a>JOBS</a></li>
+    <li><a>CLIENTS</a></li>
+    <li><a>EMPLOYERS</a></li>
+    <li><a>CONTACT US</a></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h6 class="span1">Profile</h6>
+
+  <div class="data">
+    <div class="img">
+      <img src="https://cdn.pixabay.com/photo/2017/11/16/08/59/baby-2953787_960_720.jpg" alt="">
+      <span class="span">Edit Photo</span>
+      <span class="span">Edit Profile</span>
+    </div>
+    <div *ngFor="let userd of userdata">
+      <div class="content" *ngIf="userd.name == nameProfile">
+        <p>I'm <span class="xyz">{{userd.name}} {{userd.lastname}}</span> and im above <span class="xy">{{userd.age}}
+          </span> years and you can send your emails to <a>jogmerkarsagar@gmail.com</a>. I live in the Country
+          <span class="xy">{{userd.country}}</span> and state of <span class="xy">{{userd.state}}</span> please send me
+          newsletters. Please reach out to me on my phone numeber. Contact me on this Number <span
+            class="xy">{{userd.mobile}}</span>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          consequatur</p>
+        <button type="button" class="btn btn-success">I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="section3">
+  <p style="font-size: 16px;">Subscribe to our job Seeker Mailing List</p>
+  <input type="text" placeholder="Enter Your Email Address" id="email"><i class="fa-solid fa-envelope"></i>
+</div>
