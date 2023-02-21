@@ -14,13 +14,15 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import{HttpClientModule} from '@angular/common/http';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     UserProfileComponent,
-    HomeComponent
+    HomeComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

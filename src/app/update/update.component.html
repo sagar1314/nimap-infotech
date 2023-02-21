@@ -1,20 +1,21 @@
 <div class="register">
-  <h2>Register</h2>
+  <h2>Update form</h2>
   <div mat-dialog-close><i class="fa-solid fa-circle-xmark"></i></div>
 </div>
 
 
 <div mat-dialog-content>
-  <form [formGroup]="validForm" (ngSubmit)="subForm()">
+  <form [formGroup]="validForm" (ngSubmit)="updatesubForm()">
     <div class="formdata">
+      <!-- <div class="img">
+        <input type="image" src="https://cdn3.iconfinder.com/data/icons/business-vol-26/100/Artboard_2-1024.png" alt="">
+      </div> -->
 
       <div class="img" >
-        <img [src]="imgurl" >
-        <input type="file" id="file" style="display:none;" (change)="onImageChange($event)" class="photo">
-        <label for="file">Upload Your Photo</label> <br>
-        <span *ngIf="imgValid">image size should be less than 310*325 pixel</span>
+        <img [src]="imgurl">
+        <input type="file" id="file" style="display:none;"  (change)="onImageChange($event)" class="photo">
+        <label class="photo" for="file">Upload Your Photo</label>
       </div>
-
 
       <div class="inputdata">
         <div class="xyz">
@@ -116,7 +117,8 @@
     <div mat-dialog-actions align="end">
       <button mat-raised-button mat-dialog-close>Cancel</button>
       <button mat-raised-button [disabled]="validForm.invalid" style="background-color:#1577ff; color: white;"
-        (click)="newPage(names.value)">Submit</button>
+      (click)="updatePage(names.value)" >Update</button>
     </div>
   </form>
 </div>
+

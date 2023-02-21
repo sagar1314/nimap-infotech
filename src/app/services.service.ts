@@ -17,5 +17,8 @@ export class ServicesService {
     return this.http.post(this.getdata,formData)
   }
 
+  updateUser(formData:any,id:any){
+    return this.http.put(`${this.getdata}/${id}`,formData)
+  }
 
 }

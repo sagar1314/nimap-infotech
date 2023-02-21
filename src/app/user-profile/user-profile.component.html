@@ -11,27 +11,37 @@
 </div>
 
 <div class="section">
-  <h6 class="span1">Profile</h6>
 
-  <div class="data">
-    <div class="img">
-      <img src="https://cdn.pixabay.com/photo/2017/11/16/08/59/baby-2953787_960_720.jpg" alt="">
-      <span class="span">Edit Photo</span>
-      <span class="span">Edit Profile</span>
-    </div>
-    <div *ngFor="let userd of userdata">
-      <div class="content" *ngIf="userd.name == nameProfile">
-        <p>I'm <span class="xyz">{{userd.name}} {{userd.lastname}}</span> and im above <span class="xy">{{userd.age}}
-          </span> years and you can send your emails to <a>jogmerkarsagar@gmail.com</a>. I live in the Country
-          <span class="xy">{{userd.country}}</span> and state of <span class="xy">{{userd.state}}</span> please send me
-          newsletters. Please reach out to me on my phone numeber. Contact me on this Number <span
-            class="xy">{{userd.mobile}}</span>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          consequatur</p>
-        <button type="button" class="btn btn-success">I Agree</button>
+  <div>
+    <h6 class="span1">Profile</h6>
+    <div class="content">
+      <div class="img">
+
+      <div class="img" >
+        <img [src]="imgurl" >
+        <input type="file" id="file" style="display:none;" (change)="onImageChange($event)" class="photo">
       </div>
+
+        <label class="span" for="file">Edit Photo</label>
+        <span class="span" (click)="openDialog()">Edit Profile</span>
+      </div>
+<div>
+      <p>I'm <span class="xyz">{{newUserData.name}} {{newUserData.lastname}}</span> and im above <span
+          class="xy">{{newUserData.age}}
+        </span> years and you can send your emails to <span class="xy">{{newUserData.email}}</span>. I live in the
+        Country
+        <span class="xy">{{newUserData.country}}</span>and state of <span class="xy">{{newUserData.state}}</span> please
+        send me
+        newsletters. Please reach out to me on my phone number. Contact me on this Number <span
+          class="xy">{{newUserData.mobile}}</span>. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+        consequatur
+      </p>
+      <button type="button" class="btn btn-success">I Agree</button>
+    </div>
     </div>
   </div>
 </div>
+
 
 
 <div class="section3">

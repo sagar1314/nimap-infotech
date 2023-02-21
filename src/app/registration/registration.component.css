@@ -13,13 +13,16 @@ h2{
   color: lightblue;
 }
 
-.img input{
+.img img{
   height: 160px;
   width: 150px;
   background-color: #80808024;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
+}
+.img label{
+  color: #1577ff;
 }
 
 .photo{

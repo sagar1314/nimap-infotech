@@ -17,7 +17,8 @@ export class RegistrationComponent {
 
 
   validForm = new FormGroup({
-    name:new FormControl('',[Validators.required]),
+    file1: new FormControl(''),
+    name:new FormControl('',[Validators.required, Validators.maxLength(20)]),
     lastname:new FormControl('',[Validators.required]),
     email:new FormControl('',[Validators.required, Validators.email]),
     mobile:new FormControl('',[Validators.required]),
@@ -30,9 +31,31 @@ export class RegistrationComponent {
   })
 
 
+
+
+// image change``
+  imgurl:any="https://cdn3.iconfinder.com/data/icons/business-vol-26/100/Artboard_2-1024.png"
+  imgValid:any=true
+  onImageChange(e:any) {
+    if(e.target.files) {
+      if(e.target.files[0].size < 310*325){
+        this.imgValid=false
+        const reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+
+      reader.onload=(imgres:any)=>{
+        console.log(imgres.target.result)
+        this.imgurl=imgres.target.result
+      }
+      }
+    }
+
+  }
+
   cls:any
   subForm(){
     console.log(this.validForm.value)
+    this.file1?.patchValue(this.imgurl)
     this.serv.addUser(this.validForm.value).subscribe(()=>{
       alert('data added Successfully!')
     })
@@ -44,22 +67,21 @@ export class RegistrationComponent {
     this.registeref.close()
   }
 
+  get file1(){
+    return this.validForm.get('file1')
+  }
+
   get name(){
     return this.validForm.get('name')
   }
 
   get lastname(){
-    return this.validForm.get('name')
+    return this.validForm.get('lastname')
   }
 
 
-imgpath:any='https://cdn3.iconfinder.com/data/icons/business-vol-26/100/Artboard_2-1024.png'
-  editImg(valim:any){
 
-    this.imgpath=valim
-    console.log(this.imgpath)
 
-  }
 
 
 

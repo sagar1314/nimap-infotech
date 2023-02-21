@@ -112,7 +112,8 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding-bottom: 30px;
+  padding-top: 170px;
   color: white;
   background-color: #08171f;
 }
