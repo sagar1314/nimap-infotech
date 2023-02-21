@@ -58,7 +58,6 @@ nameProfile:any
 
       this.serv.updateUser(this.newUserData,this.newUserData.id).subscribe(()=>{
         console.log(this.imgurl, this.newUserData )
-        alert('image Update Successfully!')
       })
       }
 
@@ -69,7 +68,7 @@ nameProfile:any
 
   openDialog() {
     this.dialog.open(UpdateComponent, {
-    width:"42%",
+    width:"36%",
     data:this.newUserData.id
     });
   }

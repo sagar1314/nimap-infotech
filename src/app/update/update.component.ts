@@ -65,6 +65,7 @@ ngOnInit(){
   }
 
   imgurl:any
+  imgurl1:any
   onImageChange(e:any) {
 
     if(e.target.files) {
@@ -72,8 +73,8 @@ ngOnInit(){
       reader.readAsDataURL(e.target.files[0]);
 
       reader.onload=(imgres:any)=>{
-        console.log(imgres.target.result)
-        this.imgurl=imgres.target.result
+        this.imgurl1=imgres.target.result
+        console.log("image path",this.imgurl)
       }
     }
 

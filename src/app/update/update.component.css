@@ -44,13 +44,13 @@
   }
   .ab{
     margin: 4px;
-    width: 10.8vw;
+    width: 13.3vw;
     display: flex;
     flex-direction: column;
     position: relative;
   }
   mat-form-field{
-    width: 22vw;
+    width: 27vw;
   }
   .require{
     color: red;
